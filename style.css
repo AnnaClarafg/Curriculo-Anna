@@ -1,0 +1,122 @@
+@charset "UTF-8";
+:root {
+    --cor1: #9c8867;
+    --cor2: #C5BAA7;
+    --cor3: #D9DACC;
+    --cor4: #AEACA3;
+    --cor5: #BDBBB7;
+    --padding: 1rem;
+    --padding-large: 2rem;
+    --padding-small: 0.5rem;
+    --font-size: 1rem;
+    --font-size-large: 1.2rem;
+    --font-size-small: 0.8rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor3);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: var(--padding);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2), var(--cor3));
+    text-align: center;
+    padding: var(--padding-large);
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    background-color: var(--cor3);
+    padding: var(--padding);
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+h1 {
+    padding: var(--padding-small);
+    color: #584d3b;
+    font-size: var(--font-size-large);
+}
+
+h2 {
+    padding: var(--padding-small);
+    color: #72634b;
+    font-size: var(--font-size);
+}
+
+h3 {
+    padding: var(--padding-small);
+    color: #86755a;
+    font-size: var(--font-size);
+}
+
+li {
+    padding: var(--padding-small);
+    list-style: none;
+}
+
+#principal, #secundaria, #atvd {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding);
+}
+
+.q1, .q2, .q3, .q4, .q5, .q6 {
+    background-color: var(--cor3);
+    padding: var(--padding);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.atvd1, .atvd2, .atvd3 {
+    padding: var(--padding);
+}
+
+img {
+    height: 20px;
+    margin-top: 5px;
+}
+
+
+@media (min-width: 768px) {
+    #principal, #secundaria, #atvd {
+        flex-direction: row;
+    }
+
+    .q1, .q2, .q3, .q4, .q5, .q6 {
+        width: calc(50% - var(--padding));
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: var(--font-size);
+    }
+
+    h2 {
+        font-size: var(--font-size-small);
+    }
+
+    h3 {
+        font-size: var(--font-size-small);
+    }
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}
